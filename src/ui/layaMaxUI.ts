@@ -7,6 +7,19 @@ export module ui {
     export class gameOverUI extends Laya.Scene {
 		public txtRestart:Laya.TextInput;
 		public btnRestart:Laya.Button;
+		public txtRecords:Laya.TextArea;
+		public txtBestStartTime:Laya.TextInput;
+		public txtBestRunTime:Laya.TextInput;
+		public txtBestLong:Laya.TextInput;
+		public txtLast1StartTime:Laya.TextInput;
+		public txtLast1RunTime:Laya.TextInput;
+		public txtLast1Long:Laya.TextInput;
+		public txtLast2StartTime:Laya.TextInput;
+		public txtLast2RunTime:Laya.TextInput;
+		public txtLast2Long:Laya.TextInput;
+		public txtLast3StartTime:Laya.TextInput;
+		public txtLast3RunTime:Laya.TextInput;
+		public txtLast3Long:Laya.TextInput;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();

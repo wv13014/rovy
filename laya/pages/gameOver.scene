@@ -2,10 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
+    "selecteID":17,
     "searchKey":"Scene",
     "props":{"width":400,"sceneColor":"#000000","runtime":"script/GameRestartScene.ts","height":600},
     "nodeParent":-1,
-    "maxID":8,
+    "maxID":47,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -17,7 +18,7 @@
             "x":15,
             "type":"TextInput",
             "searchKey":"TextInput,txtRestart",
-            "props":{"y":79,"x":99,"width":202,"var":"txtRestart","valign":"middle","text":"游戏结束","skin":"comp/textinput.png","height":65,"fontSize":30,"font":"Microsoft YaHei","color":"#2cb5aa","bold":true,"bgColor":"#000000","align":"center"},
+            "props":{"y":113,"x":99,"width":202,"var":"txtRestart","valign":"middle","text":"游戏结束","skin":"comp/textinput.png","height":65,"fontSize":30,"font":"Microsoft YaHei","color":"#2cb5aa","bold":true,"bgColor":"#000000","align":"center"},
             "nodeParent":2,
             "label":"txtRestart",
             "isDirectory":false,
@@ -31,7 +32,7 @@
             "x":15,
             "type":"Button",
             "searchKey":"Button,btnRestart",
-            "props":{"y":200,"x":136,"var":"btnRestart","skin":"comp/button.png","labelSize":20,"labelFont":"Arial","labelColors":"#367d6c","labelBold":true,"labelAlign":"center","label":"重新开始"},
+            "props":{"y":469,"x":136,"var":"btnRestart","skin":"comp/button.png","labelSize":20,"labelFont":"Arial","labelColors":"#367d6c","labelBold":true,"labelAlign":"center","label":"重新开始"},
             "nodeParent":2,
             "label":"btnRestart",
             "isOpen":null,
@@ -39,6 +40,244 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":5,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextArea",
+            "searchKey":"TextArea,txtRecords",
+            "props":{"y":186,"x":29,"width":342,"var":"txtRecords","text":"记录","skin":"comp/textarea.png","height":263,"fontSize":24,"font":"Arial","color":"#69b6db","bold":true,"bgColor":"#5b0f0e","align":"center"},
+            "nodeParent":2,
+            "label":"txtRecords",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":9,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextInput",
+            "searchKey":"TextInput",
+            "props":{"y":218,"x":167,"width":67,"text":"最佳记录","skin":"comp/textinput.png","height":23,"fontSize":14,"color":"#16b3ff","bold":true,"bgColor":"#5b0f0e"},
+            "nodeParent":2,
+            "label":"TextInput",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":11,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextInput",
+            "searchKey":"TextInput",
+            "props":{"y":241,"x":41,"width":318,"text":"游戏开始时间                           游戏时长     长度","skin":"comp/textinput.png","height":23,"fontSize":14,"color":"#e8e8e8","bold":true,"bgColor":"#5b0f0e"},
+            "nodeParent":2,
+            "label":"TextInput",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":14,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextInput",
+            "searchKey":"TextInput,txtBestStartTime",
+            "props":{"y":271,"x":30,"width":187,"var":"txtBestStartTime","text":"无","skin":"comp/textinput.png","height":23,"fontSize":12,"color":"#a4db69","bold":true,"bgColor":"#5b0f0e"},
+            "nodeParent":2,
+            "label":"txtBestStartTime",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":15,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextInput",
+            "searchKey":"TextInput",
+            "props":{"y":309,"x":137,"width":127,"text":"最近三次游戏记录","skin":"comp/textinput.png","height":23,"fontSize":14,"color":"#16b3ff","bold":true,"bgColor":"#5b0f0e"},
+            "nodeParent":2,
+            "label":"TextInput",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":16,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextInput",
+            "searchKey":"TextInput,txtBestRunTime",
+            "props":{"y":271,"x":226,"width":88,"var":"txtBestRunTime","skin":"comp/textinput.png","height":23,"fontSize":12,"color":"#a4db69","bold":true,"bgColor":"#5b0f0e","align":"center"},
+            "nodeParent":2,
+            "label":"txtBestRunTime",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":17,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextInput",
+            "searchKey":"TextInput,txtBestLong",
+            "props":{"y":271,"x":314,"width":45,"var":"txtBestLong","skin":"comp/textinput.png","height":23,"fontSize":12,"color":"#a4db69","bold":true,"bgColor":"#5b0f0e","align":"center"},
+            "nodeParent":2,
+            "label":"txtBestLong",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":18,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextInput",
+            "searchKey":"TextInput",
+            "props":{"y":332,"x":41,"width":318,"text":"游戏开始时间                           游戏时长     长度","skin":"comp/textinput.png","height":23,"fontSize":14,"color":"#e8e8e8","bold":true,"bgColor":"#5b0f0e"},
+            "nodeParent":2,
+            "label":"TextInput",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":28,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextInput",
+            "searchKey":"TextInput,txtLast1StartTime",
+            "props":{"y":367,"x":30,"width":187,"var":"txtLast1StartTime","text":"无","skin":"comp/textinput.png","height":23,"fontSize":12,"color":"#a4db69","bold":true,"bgColor":"#5b0f0e"},
+            "nodeParent":2,
+            "label":"txtLast1StartTime",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":38,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextInput",
+            "searchKey":"TextInput,txtLast1RunTime",
+            "props":{"y":367,"x":226,"width":88,"var":"txtLast1RunTime","skin":"comp/textinput.png","height":23,"fontSize":12,"color":"#a4db69","bold":true,"bgColor":"#5b0f0e","align":"center"},
+            "nodeParent":2,
+            "label":"txtLast1RunTime",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":39,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextInput",
+            "searchKey":"TextInput,txtLast1Long",
+            "props":{"y":367,"x":314,"width":45,"var":"txtLast1Long","skin":"comp/textinput.png","height":23,"fontSize":12,"color":"#a4db69","bold":true,"bgColor":"#5b0f0e","align":"center"},
+            "nodeParent":2,
+            "label":"txtLast1Long",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":40,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextInput",
+            "searchKey":"TextInput,txtLast2StartTime",
+            "props":{"y":391,"x":30,"width":187,"var":"txtLast2StartTime","text":"无","skin":"comp/textinput.png","height":23,"fontSize":12,"color":"#a4db69","bold":true,"bgColor":"#5b0f0e"},
+            "nodeParent":2,
+            "label":"txtLast2StartTime",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":41,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextInput",
+            "searchKey":"TextInput,txtLast2RunTime",
+            "props":{"y":390,"x":226,"width":88,"var":"txtLast2RunTime","skin":"comp/textinput.png","height":23,"fontSize":12,"color":"#a4db69","bold":true,"bgColor":"#5b0f0e","align":"center"},
+            "nodeParent":2,
+            "label":"txtLast2RunTime",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":42,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextInput",
+            "searchKey":"TextInput,txtLast2Long",
+            "props":{"y":390,"x":314,"width":45,"var":"txtLast2Long","skin":"comp/textinput.png","rotation":0,"height":23,"fontSize":12,"color":"#a4db69","bold":true,"bgColor":"#5b0f0e","align":"center"},
+            "nodeParent":2,
+            "label":"txtLast2Long",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":43,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextInput",
+            "searchKey":"TextInput,txtLast3StartTime",
+            "props":{"y":413,"x":30,"width":187,"var":"txtLast3StartTime","text":"无","skin":"comp/textinput.png","height":23,"fontSize":12,"color":"#a4db69","bold":true,"bgColor":"#5b0f0e"},
+            "nodeParent":2,
+            "label":"txtLast3StartTime",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":44,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextInput",
+            "searchKey":"TextInput,txtLast3RunTime",
+            "props":{"y":414,"x":226,"width":88,"var":"txtLast3RunTime","skin":"comp/textinput.png","height":23,"fontSize":12,"color":"#a4db69","bold":true,"bgColor":"#5b0f0e","align":"center"},
+            "nodeParent":2,
+            "label":"txtLast3RunTime",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":45,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"TextInput",
+            "searchKey":"TextInput,txtLast3Long",
+            "props":{"y":413,"x":314,"width":45,"var":"txtLast3Long","skin":"comp/textinput.png","height":23,"fontSize":12,"color":"#a4db69","bold":true,"bgColor":"#5b0f0e","align":"center"},
+            "nodeParent":2,
+            "label":"txtLast3Long",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":46,
             "child":[
                 ]
         }],

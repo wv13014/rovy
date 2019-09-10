@@ -1,6 +1,8 @@
 import Snake from "./Snake";
+import RecordModel from "./RecordModel";
     
-export default class RunningGame{    
+export default class RunningGame{
+    startTime = RecordModel.ins.gameRecords[RecordModel.ins.gameRecords.length - 1].getTime();
 
     snake:Snake[];
     food:Laya.Sprite;
@@ -11,11 +13,11 @@ export default class RunningGame{
 
     timer:Laya.Timer;
     gameOver:boolean = false;
-    tEat:number;
-    tRun:number;
-    tIsOver:number;
+    //tEat:number;
+    //tRun:number;
+    //tIsOver:number;
 
-    runGame() :void{  
+    runGame() :void{
         //蛇
         this.snake = [new Snake];
         Laya.stage.addChild(this.snake[0]);
@@ -28,8 +30,8 @@ export default class RunningGame{
         Laya.stage.addChild(this.food);
         this.food.graphics.drawRect(0, 0, 10, 10, "#ffff20");
         //填充食物坐标数组
-        for(var x = 0;x < 40;x++){      
-                this.arrCoordinate[x] = [(x * 100) + 0,(x * 100) + 1,(x * 100) + 2,(x * 100) + 3,(x * 100) + 4,(x * 100) + 5,(x * 100) + 6,
+        for(let x = 0;x < 40;x++){
+                this.arrCoordinate[x] = [(x * 100),(x * 100) + 1,(x * 100) + 2,(x * 100) + 3,(x * 100) + 4,(x * 100) + 5,(x * 100) + 6,
                     (x * 100) + 7,(x * 100) + 8,(x * 100) + 9,(x * 100) + 10,(x * 100) + 11,(x * 100) + 12,(x * 100) + 13,(x * 100) + 14,
                     (x * 100) + 15,(x * 100) + 16,(x * 100) + 17,(x * 100) + 18,(x * 100) + 19,(x * 100) + 20,(x * 100) + 21,(x * 100) + 22,
                     (x * 100) + 23,(x * 100) + 24,(x * 100) + 25,(x * 100) + 26,(x * 100) + 27,(x * 100) + 28,(x * 100) + 29,(x * 100) + 30,
@@ -51,7 +53,7 @@ export default class RunningGame{
 
     //控制蛇体
     onKeyDown(e: Event):void {
-        var keyCode: number = e["keyCode"];
+        let keyCode: number = e["keyCode"];
         if(keyCode == 37 && this.snake[0].fangxiang != 4 && this.snake[0].fangxiang)
             this.snake[0].fangxiang = 3;
         if(keyCode == 38 && this.snake[0].fangxiang != 2)
@@ -75,13 +77,13 @@ export default class RunningGame{
     //蛇体行走
     run():void{
         //蛇尾
-        var xOld = this.snake[0].x;
-        var yOld = this.snake[0].y;
-        var fOld = this.snake[0].fangxiang;
-        for(var i = 1;i < this.snake.length;i++){
-            var xTemp = this.snake[i].x;
-            var yTemp = this.snake[i].y;
-            var fTemp = this.snake[i].fangxiang;
+        let xOld = this.snake[0].x;
+        let yOld = this.snake[0].y;
+        let fOld = this.snake[0].fangxiang;
+        for(let i = 1;i < this.snake.length;i++){
+            let xTemp = this.snake[i].x;
+            let yTemp = this.snake[i].y;
+            let fTemp = this.snake[i].fangxiang;
             this.snake[i].x = xOld;
             this.snake[i].y = yOld;
             this.snake[i].fangxiang = fOld;
@@ -107,9 +109,9 @@ export default class RunningGame{
             //生成蛇新节点
             this.snake[0].jie += 1;
             this.snake[this.snake[0].jie] = new Snake();
-            var temp = this.snake[0].jie;
-            var xTemp = this.snake[this.snake[0].jie - 1].x;
-            var yTemp = this.snake[this.snake[0].jie - 1].y;
+            let temp = this.snake[0].jie;
+            let xTemp = this.snake[this.snake[0].jie - 1].x;
+            let yTemp = this.snake[this.snake[0].jie - 1].y;
             this.snake[temp].graphics.drawRect(0, 0, 10, 10,"#ffff20");
             if(this.snake[temp - 1].fangxiang == 1){
                 this.snake[temp].x = xTemp;
@@ -140,7 +142,7 @@ export default class RunningGame{
     isOver():void{
         if(this.snake[0].x < 0 || this.snake[0].y < 40 || this.snake[0].y > 430 || this.snake[0].x > 390)
             this.gameOver = true;
-        for(var i = 1;i < this.snake.length;i++){
+        for(let i = 1;i < this.snake.length;i++){
             if(this.snake[0].x == this.snake[i].x && this.snake[0].y == this.snake[i].y)
                 this.gameOver = true;
         }
@@ -149,8 +151,16 @@ export default class RunningGame{
             // clearInterval(this.tIsOver);
             // clearInterval(this.tEat);
             this.timer.clearAll(this);
+            //记录游戏运行时间
+            let gameRunTime = Math.floor((RecordModel.ins.gameRecords[RecordModel.ins.gameRecords.length - 1].getTime() - this.startTime)/1000);
+            let hr = Math.floor(gameRunTime/3600);
+            let min = Math.floor((gameRunTime - hr*3600)/60);
+            let sec = gameRunTime%60;
+            RecordModel.ins.gameRecords[RecordModel.ins.gameRecords.length - 1].gameRunTime = hr + "时" + min + "分" + sec +"秒";
+            RecordModel.ins.gameRecords[RecordModel.ins.gameRecords.length - 1].jie = this.snake[0].jie + 1;
+            //清理场景
             Laya.stage.removeChild(this.food);
-            for(var i = 0;true;i++){
+            for(let i = 0;true;i++){
                 if(this.snake[i])
                     Laya.stage.removeChild(this.snake[i]);
                 else
@@ -162,9 +172,9 @@ export default class RunningGame{
 
     //随机抽取食物坐标
     pushArr():void{
-        var x = Math.floor(Math.random()*39);
-        var y = Math.floor(Math.random()*39);
-        var temp = this.arrCoordinate[x][y];
+        let x = Math.floor(Math.random()*39);
+        let y = Math.floor(Math.random()*39);
+        let temp = this.arrCoordinate[x][y];
         this.xCoordinate = Math.floor(temp / 100) * 10;
         for(temp;true;temp -= 100){
             if(temp - 100 < 0){
