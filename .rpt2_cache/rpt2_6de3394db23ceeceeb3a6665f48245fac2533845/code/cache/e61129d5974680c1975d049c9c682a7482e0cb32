@@ -1,8 +1,0 @@
-{
-  "code": "import { ui } from \"./../ui/layaMaxUI\";\r\nimport RunningGame from \"./RunningGame\";\r\nexport default class GameStartScene extends ui.gameStartUI {\r\n    constructor() {\r\n        super();\r\n        this.btnStart.on(Laya.Event.CLICK, this, this.onStart);\r\n    }\r\n    onStart() {\r\n        this.close();\r\n    }\r\n    onClosed() {\r\n        var runningGame = new RunningGame;\r\n        runningGame.runGame();\r\n    }\r\n}\r\n//# sourceMappingURL=GameStartScene.js.map",
-  "references": [
-    "E:/laya/snake/src/ui/layaMaxUI.ts",
-    "E:/laya/snake/src/script/RunningGame.ts"
-  ],
-  "map": "{\"version\":3,\"file\":\"GameStartScene.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../src/script/GameStartScene.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,EAAE,EAAE,MAAM,mBAAmB,CAAC;AACvC,OAAO,WAAW,MAAM,eAAe,CAAC;AAExC,MAAM,CAAC,OAAO,OAAO,cAAe,SAAQ,EAAE,CAAC,WAAW;IACtD;QACI,KAAK,EAAE,CAAC;QACR,IAAI,CAAC,QAAQ,CAAC,EAAE,CAAC,IAAI,CAAC,KAAK,CAAC,KAAK,EAAE,IAAI,EAAE,IAAI,CAAC,OAAO,CAAC,CAAC;IAC3D,CAAC;IAED,OAAO;QAEH,IAAI,CAAC,KAAK,EAAE,CAAC;IACjB,CAAC;IAED,QAAQ;QACJ,IAAI,WAAW,GAAe,IAAI,WAAW,CAAC;QAC9C,WAAW,CAAC,OAAO,EAAE,CAAC;IAC1B,CAAC;CAEJ\"}"
-}

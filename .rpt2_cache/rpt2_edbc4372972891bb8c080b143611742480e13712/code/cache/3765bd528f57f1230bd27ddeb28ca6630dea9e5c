@@ -1,7 +1,0 @@
-{
-  "code": "import { ui } from \"./../ui/layaMaxUI\";\r\nexport default class GameStartScene extends ui.gameOverUI {\r\n    constructor() {\r\n        super();\r\n        this.btnRestart.on(Laya.Event.CLICK, this, this.onStart);\r\n    }\r\n    onStart() {\r\n        Laya.Scene.open(\"gameRun.scene\");\r\n    }\r\n}\r\n//# sourceMappingURL=GameRestartScene.js.map",
-  "references": [
-    "E:/laya/snake/src/ui/layaMaxUI.ts"
-  ],
-  "map": "{\"version\":3,\"file\":\"GameRestartScene.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../src/script/GameRestartScene.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,EAAE,EAAE,MAAM,mBAAmB,CAAC;AAEvC,MAAM,CAAC,OAAO,OAAO,cAAe,SAAQ,EAAE,CAAC,UAAU;IACrD;QACI,KAAK,EAAE,CAAC;QACR,IAAI,CAAC,UAAU,CAAC,EAAE,CAAC,IAAI,CAAC,KAAK,CAAC,KAAK,EAAE,IAAI,EAAE,IAAI,CAAC,OAAO,CAAC,CAAC;IAC7D,CAAC;IAED,OAAO;QACH,IAAI,CAAC,KAAK,CAAC,IAAI,CAAC,eAAe,CAAC,CAAC;IAGrC,CAAC;CAEJ\"}"
-}

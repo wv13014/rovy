@@ -1,5 +1,0 @@
-{
-  "code": "export default class Snake extends Laya.Sprite {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.jie = 0;\r\n    }\r\n}\r\n//# sourceMappingURL=Snake.js.map",
-  "references": [],
-  "map": "{\"version\":3,\"file\":\"Snake.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../src/script/Snake.ts\"],\"names\":[],\"mappings\":\"AAAA,MAAM,CAAC,OAAO,OAAO,KAAM,SAAQ,IAAI,CAAC,MAAM;IAA9C;;QAEW,QAAG,GAAU,CAAC,CAAC;IAG1B,CAAC;CAAA\"}"
-}
